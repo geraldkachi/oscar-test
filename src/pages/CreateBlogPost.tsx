@@ -13,7 +13,7 @@ const CreateBlogPost = () => {
   const [category, setCategory] = useState<'World News' | 'Business' | 'Entertainment' | 'Sports'>('World News');
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); 
 
     // Fetch a random profile picture
     // const profilePicture = await axios.get('https://randomuser.me/api/').then((res) => res.data.results[0].picture.thumbnail);
