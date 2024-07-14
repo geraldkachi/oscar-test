@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import useBlogStore from '../store/store';
 
 const CreateBlogPost = () => {
 
   const { addPost } = useBlogStore();
   const navigate = useNavigate();
-  const [loading, setLoading] = useState('');
   const [title, setTitle] = useState('');
   const [text, setText] = useState('');
   const [author, setAuthor] = useState('');

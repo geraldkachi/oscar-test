@@ -3,6 +3,7 @@ import useBlogStore from '../store/store';
 import { Helmet } from 'react-helmet';
 
 const BlogPostDetail = () => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { id } = useParams<{ id: string | undefined | any }>();
     const { posts } = useBlogStore();
     const post = posts.find((post) => post.id === parseInt(id));
