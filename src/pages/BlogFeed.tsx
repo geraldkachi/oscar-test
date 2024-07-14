@@ -46,7 +46,13 @@ const BlogFeed = () => {
         </label>
       </div>
       <div className='flex flex-col gap-10 items-start my-10'>
-        {filteredPosts.map((post) => (
+        {filteredPosts.length == 0 ?
+        <div className='flex items-center flex-col gap-10'>
+            <h1>No Post yet.  Create a Post 👇🏾</h1>
+          <button onClick={() => navigate('/create')}>Create A Blog</button>
+        </div>
+          :
+        filteredPosts.map((post) => (
           <div className='flex gap-10 items-center' key={post.id}>
             <h2>{post.title}</h2>
             <p>{post.text}</p>
@@ -58,7 +64,7 @@ const BlogFeed = () => {
       </div>
 
 
-      <button onClick={() => navigate('/create')}>Create A Blog</button>
+    
     </div>
   );
 };
