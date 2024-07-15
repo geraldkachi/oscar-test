@@ -8,7 +8,7 @@ const BlogFeed = () => {
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   const [filter, setFilter] = useState({ category: '', author: '' });
 
-  const sortedPosts = [...posts].sort((a, b) =>
+  const sortedPosts = posts.sort((a, b) =>
     sortOrder === 'asc' ? new Date(a.date).getTime() - new Date(b.date).getTime() : new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
@@ -54,6 +54,7 @@ const BlogFeed = () => {
           :
         filteredPosts.map((post) => (
           <div className='flex gap-10 items-center' key={post.id}>
+            {/* <img src={post.authorPicture} alt="" className='w-10 h-10 rounded-full' /> */}
             <h2>{post.title}</h2>
             <p>{post.text}</p>
             <p>{post.author}</p>
@@ -64,7 +65,13 @@ const BlogFeed = () => {
       </div>
 
 
-    
+              <button onClick={() => navigate('/create')}>Create A Blog</button>
+
+
+
+
+              <Link to='/home' className="mt-20">Please click here for The UI Test</Link>
+
     </div>
   );
 };
