@@ -1,7 +1,11 @@
+import { useState } from "react";
 import BottomNav from "../components/BottomNav"
 import Card from "../components/Card"
+import { DragCloseBottom } from "../components/Drawer";
 
 const Home = () => {
+    const [open, setOpen] = useState(false);
+    <DragCloseBottom {...{open, setOpen}} />
     return (
         <>
         <div className="mx-5">
@@ -15,7 +19,7 @@ const Home = () => {
                     <img src="search.svg" alt="" className="pl-3 pt- " />
                     <input type="text" placeholder="Search" className="outline-none border border-[#F4F3FD] bg-[#F2F2F2] rounded-[10px] w-full placeholder:text-[#B8B8D2] p-3 placeholder:text-[12px] placeholder:tracking-[-0.3px] placeholder:leading-[15.72px]" />
                 </div>
-                <img src="filter.svg" alt="" />
+                <img src="filter.svg" alt="" onClick={() => null} />
             </div>
 
             <Card />

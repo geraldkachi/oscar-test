@@ -1,4 +1,4 @@
-import React, { Dispatch, ReactNode, SetStateAction, useState } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 import useMeasure from "react-use-measure";
 import {
   useDragControls,
@@ -7,8 +7,12 @@ import {
   motion,
 } from "framer-motion";
 
-export const DragCloseDrawerExample = () => {
-  const [open, setOpen] = useState(false);
+interface Props {
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  children?: ReactNode;
+}
+export const DragCloseBottom = ({ open, setOpen, children }: Props) => {
   return (
     <div className="grid h-screen place-content-center bg-neutral-950">
       <button
@@ -20,6 +24,7 @@ export const DragCloseDrawerExample = () => {
 
       <DragCloseDrawer open={open} setOpen={setOpen}>
         <div className="mx-auto max-w-2xl space-y-4 text-neutral-400">
+          {children}
           <h2 className="text-4xl font-bold text-neutral-200">
             Drag the handle at the top of this modal downwards 100px to close it
           </h2>

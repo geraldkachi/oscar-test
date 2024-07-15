@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 const routeList = [
-    { route: "/", title: "Home" },
-    { route: "/Sessions", title: "Sessions" },
+    { route: "/home", title: "Home" },
+    { route: "/sessions", title: "Sessions" },
     { route: "/Search", title: "Search" },
     { route: "/Message", title: "Message" },
     { route: "/Account", title: "Account" },

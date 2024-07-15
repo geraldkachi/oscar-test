@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import useBlogStore from '../store/store';
 
 const CreateBlogPost = () => {
@@ -11,17 +11,17 @@ const CreateBlogPost = () => {
   const [text, setText] = useState('');
   const [author, setAuthor] = useState('');
   const [category, setCategory] = useState<'World News' | 'Business' | 'Entertainment' | 'Sports'>('World News');
-  const [loading, setLoading] = useState(false)
+  // const [loading, setLoading] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(); 
 
     // Fetch a random profile picture
-    setLoading(true)
-    const profilePicture = await axios.get('https://randomuser.me/api/').then((res) => {
-      setLoading(false);
-      res.data.results[0].picture.thumbnail
-    });
+    // setLoading(true)
+    // const profilePicture = await axios.get('https://randomuser.me/api/').then((res) => {
+    //   setLoading(false);
+    //   res.data.results[0].picture.thumbnail
+    // });
 
     // Generate random ID and date
     const id = Math.floor(Math.random() * 1000000);
@@ -34,7 +34,7 @@ const CreateBlogPost = () => {
       coverPicture: 'https://source.unsplash.com/random/800x600',
       text,
       author,
-      authorPicture: profilePicture,
+      // authorPicture: profilePicture,
       category,
       date,
     };
@@ -48,7 +48,7 @@ const CreateBlogPost = () => {
 
   return (
     <div className='flex flex-col justify-between items-center'>
-      {loading && <div className='flex'>Loading Images</div>}
+      {/* {loading && <div className='flex'>Loading Images</div>} */}
       <h1 className='py-10'>Create Blog Post</h1>
       <form className='flex flex-col gap-5 justify-between items-center' onSubmit={handleSubmit}>
         <label>

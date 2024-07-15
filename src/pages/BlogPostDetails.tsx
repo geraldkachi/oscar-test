@@ -24,7 +24,7 @@ const BlogPostDetail = () => {
                 <img src={post.coverPicture} alt={post.title} />
                 <p>{post.text}</p>
                 <p>{post.author}</p>
-                <img src={post.authorPicture} alt={post.author} />
+                {/* <img src={post.authorPicture} alt={post.author} /> */}
                 <p>{post.category}</p>
                 <p>{post.date}</p>
             </div>

@@ -6,7 +6,7 @@ type BlogPost = {
   coverPicture: string;
   text: string;
   author: string;
-  authorPicture: string;
+  // authorPicture: string;
   category: 'World News' | 'Business' | 'Entertainment' | 'Sports';
   date: string;
 };
