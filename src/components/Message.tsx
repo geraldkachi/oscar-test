@@ -19,7 +19,7 @@ const Card = () => <div className="flex gap-4 mt- w-full">
             <div className=" items-end justify-between">
                 <div className="flex flex-col gap-2 items-end justify-between">
                     <span className="text-[#B8B8D2] text-[10px] leading-[13.5px] tracking-[-0.3px] font-normal">02/09/2024</span>
-                    <span className="flex items-center gap-2 text-[#FF7396] font-normal text-xs leading-[15.96px] tracking-[-0.3px]"><span>Cancel session</span></span>
+                    <span className="flex items-center gap-2 text-[#FF7396] font-normal text-xs leading-[15.96px] tracking-[-0.3px]">Cancel session</span> 
                 </div>
             </div>
 
