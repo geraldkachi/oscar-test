@@ -1,4 +1,16 @@
+@font-face {
+  font-family: 'SpoofFont';
+  src: url('/path-to-your-fonts/SpoofFont.woff2') format('woff2'),
+       url('/path-to-your-fonts/SpoofFont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #root {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'SpoofFont', Arial, sans-serif;
 }

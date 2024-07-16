@@ -3,5 +3,8 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'SpoofFont', Arial, sans-serif;
+}
+body {
+  font-family: 'SpoofFont', Arial, sans-serif;
 }

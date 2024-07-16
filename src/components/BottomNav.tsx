@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const routeList = [
     { route: "/home", title: "Home" },
     { route: "/sessions", title: "Sessions" },
-    { route: "/Search", title: "Search" },
-    { route: "/Message", title: "Message" },
-    { route: "/Account", title: "Account" },
+    { route: "/search", title: "Search" },
+    { route: "/message", title: "Message" },
+    { route: "/account", title: "Account" },
   ];
 const BottomNav = () => {
   return (
