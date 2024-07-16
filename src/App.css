@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'SpoofFont';
-  src: url('/path-to-your-fonts/SpoofFont.woff2') format('woff2'),
-       url('/path-to-your-fonts/SpoofFont.woff') format('woff');
+  src: url('/fonts/SpoofFont.woff2') format('woff2'),
+       url('/fonts/SpoofFont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

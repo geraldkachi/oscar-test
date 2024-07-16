@@ -5,6 +5,7 @@ import BlogPostDetail from './pages/BlogPostDetails';
 import Home from './store/Home';
 import Session from './store/Session';
 import Account from './store/Account';
+import Message from './components/Message';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/home' element={<Home />} />
         <Route path='/sessions' element={<Session />} />
         <Route path='/account' element={<Account />} />
+        <Route path='/message' element={<Message />} />
         <Route path="/" element={<BlogFeed />} />
         <Route index path="/create" element={<CreateBlogPost />} />
         <Route path="/:id" element={<BlogPostDetail />} />
